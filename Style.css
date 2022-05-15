@@ -1,0 +1,26 @@
+#p1 {
+	background-color: blueviolet;
+	font-size: 30px;
+	color: white;
+	margin: 35px 30px 40px 30px;
+	border: 5px solid #34495E;
+	box-shadow: 4px 9px 18px #2980B9;
+	border-radius: 40px 22px 44px 23px;
+}
+div
+{
+	background-color:darkcyan;
+	font-size:32px;
+	color:white;
+}
+#p2
+{
+	background-color:cadetblue;
+	font-size:35px;
+	font-family:Arial;
+	color:white;
+}
+.center-aligment
+{
+	text-align:center;
+}
