@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+    <p>
+        Enter your UserName: <input type="text" id="t1" />
+    </p>
+    <p>
+        Enter your Password: <input type="password" id="t2" />
+    </p>
+    <p>
+        <input type="button" value="Register" onclick="save()" />
+    </p>
+    <script>
+        function save() {
+            var name = document.getElementById("t1").value;
+            var pass = document.getElementById("t2").value;
+            //support of localstorage on the browser
+            if (localStorage) {
+                localStorage.setItem("username", name);
+                localStorage.setItem("password", pass);
+                alert('successfully registered');
+            }
+            else {
+                console.log('does not support local storage');
+            }
+        }
+    </script>
+</body>
+</html>

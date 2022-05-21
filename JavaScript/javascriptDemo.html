@@ -1,0 +1,65 @@
+<html>
+<head></head>
+<body>
+
+    <script>
+        //Declare variable assign value
+        /*var age = 25;
+        var name = "Snehal";
+        var per = 78;
+        var isPresent = true;
+        console.log(age);
+        console.log(name);
+        console.log(per);
+        console.log(isPresent);
+
+        //Arithematic operation
+        var a = 10, b = 10, c;
+        c = a + b;
+        console.log("Addition is = " + c);
+
+        //if-else condition
+        var num = 2;
+        if (num % 2 == 0)
+            console.log("Even number: "+num);
+        else
+            console.log("Odd number: "+num);
+
+        //For loop 
+        for (var i = 1; i <= 10; i++)
+            console.log(i); */
+
+        //write argument in function
+        function div() {
+            var a = 20, b = 5, c;
+            c = a / b;
+            console.log("Division: "+c);
+
+        }
+        function sub(n1, n2) {
+            var sub;
+            sub = n1 - n2;
+            console.log("Subtraction: "+sub);
+        }
+
+        //write argument with return type in function
+        function mul(n1, n2) {
+            var mul;
+            mul = n1*n2;
+            return mul;
+        }
+
+        function display(empid,empname, salary) {
+            console.log(empid + " " + empname + " " + salary);
+        }
+
+        //calling function
+        div();
+        sub(20, 5);
+        var res = mul(5, 5);
+        console.log("Multiplication: " + res);
+        display(101, "Snehal", 20000);
+
+    </script>
+</body>
+</html>

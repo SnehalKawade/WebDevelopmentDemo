@@ -1,7 +1,21 @@
-nav{
-    background-color:cadetblue;
-    height:48px;
-   
+header
+{
+    position:relative;
+    height:31px;
+}
+    header marquee p {
+        position: relative;
+        top: 5px;
+    }
+nav {
+    background-color: cadetblue;
+    height: 48px;
+    width: 100%;
+    position: sticky;
+    top: 10px;
+    z-index: 2;
+    padding-top: 10px;
+    
 }
 #menu
 {
@@ -17,13 +31,114 @@ nav{
     color:white;
 }
 #banner{
-    //margin-top:2px;
+    position:relative;
     background-image: url(banner.avif);
-    height:400px;
+    top:-2px;
+    height:250px;
     width: 100%;
     background-position:bottom;
-    //background-repeat:no-repeat;
+    
+ 
 }
-a:hover {
-    background-color: #A2D9CE;
+/*a:hover {
+    background: #A2D9CE;
+    padding:8px;
+    font-size:16px;
+}*/
+/*static, relative-allow element to apply margin,padding & border,absolute,fixed,sticky*/
+#banner h1
+{
+    position:absolute;
+    top:82px;
+    /*left:50px;*/
+    color:white;
+    left:84px;
+}
+.left-panel {
+    position: relative;
+    height: 400px;
+    background-color: #5f9ea0;
+    color: white;
+    top: -502px;
+    width: 18%;
+}
+.left-panel ul
+{
+    list-style:none;
+    display:block;
+    
+}
+.left-panel ul li
+{
+    position:relative;
+    top:18px;
+    padding-top:14px;
+}
+.main-content {
+    position: relative;
+    top: -902px;
+    height: 400px;
+    margin-left: 287px;
+    overflow-y: auto;
+    width: 77%;
+}
+table td
+{
+    width:36%;
+}
+.footer {
+    position: relative;
+    height: 67px;
+    background: #5f9ea0;
+    margin-top: -914px;
+}
+    .footer p {
+        position: absolute;
+        top: 22px;
+        color: white;
+        left: 10px;
+    }
+
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #5f9ea0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #5f9ea0;
+    }
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+    float: right;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }

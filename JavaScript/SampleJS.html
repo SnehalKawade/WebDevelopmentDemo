@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+    <script>
+        
+        var x = 10;   //global scope
+        const pi = 3.14;
+        function test1()
+        {
+            var x = 20;      //function scope
+            const pi = 3.15;
+            console.log("inside the test 1 " + x);
+            console.log("inside the test 1 " + pi);
+        }
+        function test2()
+        {
+            console.log("inside the test 2 " + pi)
+            console.log("inside the test 2 " + x);
+        }
+
+        console.log("outside function " + x);
+
+        {
+            let x = 30;        //block scope
+            console.log("inside a block " + x);
+        }
+
+        test1();
+        test2();
+    </script>    
+</body>
+</html>

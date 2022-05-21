@@ -1,0 +1,62 @@
+<html>
+<head></head>
+<body>
+    <script>
+        var str = "  Welcome to JAVASCRIPT Programming";
+        var str1 = "Good Morning";
+        
+        console.log(str.toUpperCase()); //upper case
+        console.log(str.toLowerCase()); //lower case
+
+        //display index position value
+        let a = str.charAt(12);
+        console.log(a);
+
+        //concat()
+        var res = str.concat(str1);
+        console.log(res);
+
+        //length
+        console.log(str.length);
+
+        //slice()
+        let res1 = str.slice(0, 7); //index-1 value will be retrive
+        console.log(res1);
+
+        //replace()
+        //str = str.replace(/to/g, "all"); //replace all g- global replace
+        str = str.replace("to", "all"); //replace -first occurence
+        console.log(str);
+
+        //substring()
+        var r1 = str.substring(1, 5); //5- number of chars that needs to be add
+        var r2 = str.substring(4);
+        console.log(r1);
+        console.log(r2);    
+
+        //split()
+        var str2 = str.split(",");
+        console.log(str2);
+
+        //indexof() is used to get the index number of first occurance of given char 
+        var str3 = str.indexOf("JAVASCRIPT");
+        console.log(str3);
+
+        //lastindexof() is used used to get the index number of last occurance of given char
+        var str4 = str.lastIndexOf("Programming");
+        console.log(str4);
+
+        //trim()-used to remove space if any before & after of string
+        var str5 = str.trim();
+        console.log(str5);
+
+        var n1 = 9.567;
+        var str6 = n1.toString();
+
+        console.log(n1.toFixed(2)); //currency
+        console.log(n1.toFixed(3)); //weight kg-gm
+
+
+    </script>
+</body>
+</html>

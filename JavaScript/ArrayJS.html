@@ -1,0 +1,78 @@
+<html>
+<head></head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <p>
+        Enter Colors: <input type="text" id="t1" />
+    </p>
+    <p>
+        <input type="button" value="Add at First" onclick="addfirst()" />
+        <input type="button" value="Add at Last" onclick="addlast()" />
+        <input type="button" value="Remove first element" onclick="removefirst()" />
+        <input type="button" value="Remove last element" onclick="removelast()" />
+    </p>
+    <script>
+        var colors = ["Purple", "Blue", "Green", "Black"];
+        var data = "<ol>";
+        data = ' ';
+        
+        // push,pop,shift unshift
+        //colors.push("Gray");  //add element at the last
+        //colors.unshift("White");  //add elemnt at first position
+       // colors.pop();  //remove the last element
+        //colors.shift();  //remove the first elemnt
+        function display() {
+            data = ' ';
+        for (let i = 0; i < colors.length; i++)
+        {
+            data += "<li>" + colors[i] + "</li>";
+        }
+        data += "</ul>";
+        //console.log(data);
+        document.getElementById("d1").innerHTML = data;
+       }
+
+        function addfirst()
+        {
+            colors.unshift(document.getElementById("t1").value);
+            document.getElementById('t1').value = ' ';
+            display();
+        }
+
+        function addlast() {
+            colors.push(document.getElementById("t1").value);
+            document.getElementById('t1').value = ' ';
+            display();
+        }
+
+        function removefirst() {
+            colors.shift(document.getElementById("t1").value);
+            document.getElementById('t1').value = ' ';
+            display();
+        }
+
+        function removelast() {
+            colors.pop(document.getElementById("t1").value);
+            document.getElementById('t1').value = ' ';
+            display();
+        }
+
+
+        var cities = ["Solapur", "Pune", "Mumbai", "Delhi"];
+        cities.splice(3, 0, "Nashik", "Nagpaur");
+        //const citycopy = cities.slice(1, 3); //citycopy is of array type
+        cities.sort();   //only work with string,not for numbers
+        cities.reverse();
+
+        var data1 = "<ul type='square'>";
+        for (let i = 0; i < cities.length; i++) {
+            data1 += "<li>" + cities[i] + "</li>";
+        }
+        data1 += "</ul>";
+        console.log(data1);
+        document.getElementById("d2").innerHTML = data1;
+    
+    </script>
+</body>
+</html>

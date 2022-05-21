@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Calculator Demo</title>
+</head>
+<body>
+    <form>
+        <p>
+            Enter a Number: <input type="text" id="n1" />
+        </p>
+        <p>
+            Enter a Number: <input type="text" id="n2" />
+        </p>
+        <p>
+            Result: <input type="text" id="n3" />
+        </p>
+        <p>
+            <input type="button" value="Addition" onclick="addition()" />
+            <input type="button" value="Subtract" onclick="subtract()" />
+            <input type="button" value="Multiply" onclick="mul()" />
+            <input type="button" value="Division" onclick="division()" />
+            <input type="reset" value="Clear" onclick="reset" />
+        </p>
+    </form>
+
+
+    <script>
+        function addition()
+        {
+            //getElemebtById method return the html tag
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            //information you will get from html it is in string format(extbox)
+            var c = parseInt(a) + parseInt(b);
+            document.getElementById("n3").value = c;
+
+        }
+        function subtract()
+        {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;           
+            var c = parseInt(a) - parseInt(b);
+            document.getElementById("n3").value = c;
+        }
+       
+        function mul()
+        {
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            var c = parseInt(a) * parseInt(b);
+            document.getElementById("n3").value = c;
+        }
+
+        function division()
+        {   
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;   
+            var c = parseInt(a) / parseInt(b);
+            document.getElementById("n3").value = c;
+        }
+    </script>
+
+</body>
+</html>

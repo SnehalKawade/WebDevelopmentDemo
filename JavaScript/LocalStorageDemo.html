@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+    <div id="d1"></div>
+    <p>
+        Enter your UserName: <input type="text" id="t1" />
+    </p>
+    <p>
+        Enter your password: <input type="password" id="t2" />
+    </p>
+    <p>
+        <input type="button" value="Login" onclick="display()" />
+    </p>
+
+    <script>
+        function display() {
+            if (localStorage) {
+                let name = localStorage.getItem("username");
+                let pass = localStorage.getItem("password");
+                var t1 = document.getElementById("t1").value;
+                var t2 = document.getElementById("t2").value;
+                if (name == t1 && pass == t2) {
+
+                    alert("success");
+                }
+                else {
+                    alert('Fail');
+                }
+
+            }
+
+        }
+    </script>
+</body>
+</html>

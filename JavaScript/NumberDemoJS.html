@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+    <div id="n1"></div>
+    <script>
+        var num = [56, 23, 11, 99, 45];
+        num.sort();
+        //num.push("15");
+        //num.unshift("85");
+        //num.pop();
+        //num.shift();
+
+        //const numcopy = num.slice(1, 4);
+        //console.log(numcopy);
+        
+        var n2 = [14000, 104, 99];
+       // n2.sort();
+        n2.sort(function (a, b) { return a - b }); //asc
+        //n2.sort(function (a, b) { return b - a }); //desc
+
+      /* var data1 = "<ul type='square'>";
+        for (let i = 0; i < num.length; i++) {
+            data1 += "<li>" + num[i] + "</li>";
+        }
+        data1 += "</ul>";
+        console.log(data1);*/
+        document.getElementById("n1").innerHTML = n2;
+
+        
+    </script>
+</body>
+</html>
