@@ -3,10 +3,10 @@ header
     position:relative;
     height:31px;
 }
-    header marquee p {
+header marquee p {
         position: relative;
         top: 5px;
-    }
+}
 nav {
     background-color: cadetblue;
     height: 48px;
@@ -142,3 +142,9 @@ input[type=submit] {
     display: table;
     clear: both;
 }
+/*#btn-back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    display: none;
+}*/

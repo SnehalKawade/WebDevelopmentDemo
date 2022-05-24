@@ -1,0 +1,65 @@
+<html>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        //asynchronous code in javascript
+        //synchronius-first ->second->sequence access
+        //asynchronous-concuurent access
+
+        //callback is mostly used in async calls
+
+        //promise in havascript
+        // promise are used to handle async calls/ oprations
+        //advantage
+        //1.improve code readability
+        //2.handle the multiple async calls/code/operations
+        //3.better error handling
+
+        //state in promise
+        //resolve-success
+        //reject-error
+
+        /*
+         Promise state	    result
+            pending 	    undefined
+            fulfilled	    result value
+            rejected	    error object
+
+            //.then()-> it is executed when promise is either resolve or reject
+            have 2 arguments
+            1.resolve->when it is success, result is value
+            2.reject->when the response is reject or error
+            //.catch()->to handle the error
+        */
+
+        function display(data) {
+            document.getElementById("d1").innerHTML = data;
+        }
+        function displayerror(data) {
+            document.getElementById("d2").innerHTML = data;
+        }
+        var promise = new Promise(function (resolve, reject) {
+            //can write code to get data from server/ DB...
+            let x = 10;
+            if (x == 10) {
+                resolve("code get executed successfully");
+            }
+            else {
+                reject("Error in the code");
+            }
+        });
+
+        promise.then(function (value) {
+            display(value);
+        }).catch(function (error) {
+            displayerror(error);
+        });
+
+
+
+    </script>
+</body>
+</html>
+
+

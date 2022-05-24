@@ -1,0 +1,83 @@
+<html>
+<head></head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <p>Messages will be displayed after 3 sec</p>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <script>
+        const employees = [
+            {
+                firstname: "Snehal",
+                lastname: "Kawade",
+                city: "Solapur"
+            },
+            {
+                firstname: "Sayali",
+                lastname: "Shukla",
+                city: "Pune"
+            },
+            {
+                firstname: "Sagar",
+                lastname: "Kawade",
+                city: "Mumbai"
+            },
+        ]
+        document.getElementById("d1").innerHTML = employees[0].firstname + " " + employees[0].lastname
+            + " " + employees[0].city;
+
+
+        var data = "<table border='1'><tr><th>First Name</th><th>Last Name</th><th>City</th></tr>";
+        for (let i = 0; i < employees.length; i++) {
+            data += "<tr><td>" + employees[i].firstname + "</td><td>" + employees[i].lastname + "</td><td>"
+                + employees[i].city + "</td></tr>";
+        }
+        data += "</table>";
+        document.getElementById("d2").innerHTML = data;
+
+        //function callback
+        //Asynchronous
+        //promise
+
+        function add(a, b, mycallback) {
+            let sum = a + b;
+            mycallback(sum);
+        }
+        function display(sum) {
+            document.getElementById("d3").innerHTML = "Addition is " + sum;
+        }
+
+        add(10, 20, display);
+
+
+
+        //setTimeout() 
+
+        /* function display() {
+            document.getElementById("d4").innerHTML = "Welcome to Programming world";
+        }
+        setTimeout(display, 3000); */
+
+        //Or
+
+        setTimeout(function () {
+            document.getElementById("d4").innerHTML = "Welcome to java script Programming world";
+        }, 3000);
+
+        //setInterval()
+        function showtime() {
+            let d = new Date();
+            let res = d.getHours() + ":"+ d.getMinutes() +":"+ d.getSeconds();
+            document.getElementById("d5").innerHTML = res;
+        }
+        setInterval(showtime, 1000);
+
+
+
+
+
+    </script>
+</body>
+</html>

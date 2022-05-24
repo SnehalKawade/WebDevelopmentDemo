@@ -1,0 +1,40 @@
+<html>
+<head><title>Object Demo</title></head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        var emp = {}; //object declaration
+        emp.Id = 1;
+        emp.Name = "User2";
+        const employee = {     //object create and declaration
+            firstname: "Snehal",
+            lastname: "Kawade",
+            age: 25,
+            fullName: function () {
+                return this.firstname + " " + this.lastname;
+            }
+        }
+        const product = {
+            id: 1,
+            name: "mouse",
+            price: 899,
+            discountAmount: function () {
+                return this.price * 0.10;
+            },
+            display: function () {
+                return this.id + " " + this.name + " " + this.price;
+            }
+        }
+        console.log(employee.firstname + employee["lastname"]);
+        console.log(product["name"] + product.price);
+        console.log(emp.Name);
+        document.getElementById("d1").innerHTML = Object.values(employee);
+        console.log(employee);
+        document.getElementById("d2").innerHTML = JSON.stringify(product);
+
+        document.getElementById("d1").innerHTML = employee.fullName();
+        document.getElementById("d2").innerHTML = product.display();
+    </script>
+</body>
+</html>

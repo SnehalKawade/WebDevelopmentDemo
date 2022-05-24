@@ -1,0 +1,36 @@
+<html>
+<head><title>Function Demo</title></head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script>
+        //call(),bind(),apply()
+        //bind()-it is used to take borrow
+        const employee = {
+            age: 25,
+            fullName: function (city, country) {
+                return this.firstname + " " + this.lastname + " " + city + " " + country;
+            }
+        }
+
+        const student = {
+            id:101,
+            firstname: "User",
+            lastname: "Admin",
+            Display: function () {
+                return this.firstname + " " + this.lastname;
+            }
+        }
+        const member = {
+            firstname: "Snehal",
+            lastname: "Kawade"
+        }
+
+        let studinfo = student.Display.bind(member);
+        document.getElementById("d1").innerHTML = employee.fullName.call(member, "Solapur", "India");
+        document.getElementById("d2").innerHTML = employee.fullName.apply(member, ["Pune", "Inadia"]);
+        document.getElementById("d3").innerHTML = studinfo();
+    </script>
+</body>
+</html>
