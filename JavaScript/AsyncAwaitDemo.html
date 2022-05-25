@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+    <div id="d1"></div>
+    <script>
+        /*async & await keyword in javascript
+         1.async & await makes promise eaiser to write
+         async- to make function return promise(resolve)
+         await- wait for response.use await keyword
+         */
+        function display(data) {
+            document.getElementById("d1").innerHTML = data;
+        }
+        async function myfunc() {
+            return "Good Morning";
+        }
+        myfunc().then(function (value) {
+            display(value);
+        });
+
+
+    </script>
+</body>
+</html>
