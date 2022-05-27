@@ -245,8 +245,8 @@ nav {
 #dash {
     position: relative;
     background-image: url(login.avif);
-    margin-top:100px;
-    height: 600px;
+    /*margin-top:100px;*/
+    height: 500px;
     width: 100%;
     background-size: 100%;
     background-position: center;

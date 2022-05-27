@@ -17,7 +17,7 @@
                             <li><a href="HomePage.html">Home</a></li>
                             <li><a href="AboutUs.html">About Us</a></li>
                             <li><a href="ContactUs.html">Contact Us</a></li>
-                            <li><a href="Register.html">My Account</a></li>
+                            <li><a href="login.html">My Account</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -28,6 +28,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12"></div>
+                <div id="d1" ></div>
             </div>
         </div>
     </section>
@@ -84,7 +85,7 @@
                                 Login
                             </button>
                             <p class="small fw-bold mt-2 pt-1 mb-0">
-                                Don't have an account? <a href="Register.html"
+                                Don't have an account? <a href="Dashboard.html".html"
                                                           class="link-danger">Register</a>
                             </p>
                         </div>
@@ -109,8 +110,8 @@
     </div>-->
     <!-- Copyright -->
     <!--</footer>-->
-    <!--<script>
-        function validateUser() {
+    <script>
+       /* function validateUser() {
             // save email & pass which is entered in textboxes by the user
             var emailId = document.getElementById("Input1").value;
             var password = document.getElementById("Input2").value;
@@ -125,8 +126,12 @@
                 alert("Fail to login");
                 return false;
             }
+        }*/
+
+        function display() {
+            document.getElementById("d1").innerHTML = "Welcome " + localStorage.getItem("username");
         }
-    </script>-->
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
