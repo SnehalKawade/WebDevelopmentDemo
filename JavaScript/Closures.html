@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+    <input type="button" value="count" onclick="display()" />
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        //Closures in javasceipt
+        //closure is a function having access to parent function data/variable
+        //even after the parent function scope has terminated
+        //any javascript function can access variable which are either global
+        //or which are decalre above them
+        //counter -when user click on button i wqnt to find out no. count click on button
+        //with help of closures
+        //inner function/nested function
+       
+       /* function displaycount() {
+            let counter = 0; //local variable declaration
+            function increment() {
+                counter++;
+                increment();
+                return counter();
+            }
+        } */
+        const result = (
+            function () {
+                let counter = 0;
+                return function () {  //closures
+                    counter++;
+                    return counter;
+                }
+            })();
+        const result1 = (
+             ()=> {
+                let counter = 0;
+                return () =>{  //closures
+                    counter++;
+                    return counter;
+                }
+            })();
+        function display() {
+            document.getElementById("d1").innerHTML = result();
+        }
+        function display() {
+            document.getElementById("d2").innerHTML = result1();
+        }
+    </script>
+</body>
+</html>

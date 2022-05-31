@@ -6,6 +6,7 @@
     <p>This example shows the syntax of an Arrow Function, and how to use it.</p>
 
     <p id="demo"></p>
+    <div id="d1"></div>
 
     <script>
         //arrow function reduces lots of code and makes the mode more readable.
@@ -15,9 +16,24 @@
 
     hello = () => {
     return "Hello World!";
-    }
+        }
 
-    document.getElementById("demo").innerHTML = hello();
+        //or
+        var str1 = () => "Good Morning";
+        var str2 = (name) => "Hiii " + name;
+        var str3 = name => "Hello " + name;
+
+        var emp = {
+            firstname: "Snehal",
+            age: 25,
+            details: () => {
+                return firstname + " " + age;
+            },
+            test: name => "hello" + name
+        }
+
+        document.getElementById("demo").innerHTML = hello();
+        document.getElementById("d1").innerHTML = emp.details();
     </script>
 
 </body>
